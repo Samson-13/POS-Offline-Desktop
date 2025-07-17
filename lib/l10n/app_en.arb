@@ -2,6 +2,8 @@
   "@@locale": "en",
   "brand_name": "POS Samsun",
   "brand_name_subtitle" : "(NextComm)",
+  "search_product" : "Search Product",
+  "edit" : "Edit",
   "home": "Home",
   "products": "Products",
   "dashboard" : "Dashboard",

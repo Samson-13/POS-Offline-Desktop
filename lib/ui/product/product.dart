@@ -24,12 +24,10 @@ class ProductScreenState extends State<ProductScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.grey[100],
-        child: Padding(
-          padding: const EdgeInsets.all(50),
-          child: ProductContainer(db: db),
-        ),
+      backgroundColor: Theme.of(context).colorScheme.surface,
+      body: Padding(
+        padding: const EdgeInsets.all(50.0),
+        child: ProductContainer(db: db),
       ),
     );
   }

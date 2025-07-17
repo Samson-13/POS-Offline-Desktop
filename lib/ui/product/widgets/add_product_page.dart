@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pos_offline_desktop/l10n/l10n.dart';
+import 'package:pos_offline_desktop/ui/widgets/custom_button.dart';
 
 class AddProductDialog extends StatefulHookConsumerWidget {
   const AddProductDialog({super.key});
@@ -47,9 +48,9 @@ class _AddProductDialogState extends ConsumerState<AddProductDialog> {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: Container(
         padding: const EdgeInsets.all(16.0),
-        width: 500, // Optional max width for the form
+        width: 500,
         decoration: BoxDecoration(
-          color: Colors.white, // White background for the form area
+          color: Theme.of(context).colorScheme.surface,
           borderRadius: BorderRadius.circular(12),
           boxShadow: [
             BoxShadow(
@@ -128,16 +129,16 @@ class _AddProductDialogState extends ConsumerState<AddProductDialog> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  TextButton(
+                  CustomButton(
                     onPressed: () => Navigator.of(context).pop(),
-                    child: Text(context.l10n.cancel),
+                    backgroundColor: Colors.red.shade400,
+
+                    title: context.l10n.cancel,
                   ),
-                  ElevatedButton(
+                  CustomButton(
+                    title: context.l10n.save,
+                    backgroundColor: Theme.of(context).colorScheme.primary,
                     onPressed: _saveProduct,
-                    child: Text(
-                      context.l10n.save_product,
-                      // style: TextStyle(color: Colors.black),
-                    ),
                   ),
                 ],
               ),

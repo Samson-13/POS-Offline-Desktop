@@ -15,6 +15,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get brand_name_subtitle => '(NextComm)';
 
   @override
+  String get search_product => 'Search Product';
+
+  @override
+  String get edit => 'Edit';
+
+  @override
   String get home => 'Home';
 
   @override

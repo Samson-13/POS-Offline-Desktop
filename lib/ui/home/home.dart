@@ -7,6 +7,7 @@ import 'package:pos_offline_desktop/l10n/l10n.dart';
 import 'package:pos_offline_desktop/ui/customer/customer.dart';
 import 'package:pos_offline_desktop/ui/invoice/invoice.dart';
 import 'package:pos_offline_desktop/ui/pages/sidebar_page.dart';
+import 'package:pos_offline_desktop/ui/product/product.dart';
 import 'package:pos_offline_desktop/ui/widgets/side_bar.dart';
 
 import '../product/widgets/widgets.dart';
@@ -25,7 +26,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final db = ref.watch(appDatabaseProvider);
-    final colorScheme = Theme.of(context).colorScheme;
 
     return Scaffold(
       body: Row(
@@ -87,7 +87,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           // Main Content Area
           Expanded(
             child: Container(
-              color: colorScheme.surface,
+              color: Theme.of(context).colorScheme.surface,
               child: _buildPageContent(db),
             ),
           ),

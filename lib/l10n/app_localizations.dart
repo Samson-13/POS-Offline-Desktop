@@ -106,6 +106,18 @@ abstract class AppLocalizations {
   /// **'(NextComm)'**
   String get brand_name_subtitle;
 
+  /// No description provided for @search_product.
+  ///
+  /// In en, this message translates to:
+  /// **'Search Product'**
+  String get search_product;
+
+  /// No description provided for @edit.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit'**
+  String get edit;
+
   /// No description provided for @home.
   ///
   /// In en, this message translates to:
