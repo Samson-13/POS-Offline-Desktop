@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pos_offline_desktop/l10n/l10n.dart';
-import 'package:pos_offline_desktop/ui/pages/dashboard_page.dart';
+import 'package:pos_offline_desktop/ui/pages/sidebar_page.dart';
 
-class DashboardMenu extends StatelessWidget {
-  final DashboardPage selectedPage;
-  final ValueChanged<DashboardPage> onPageSelected;
+class SideBarMenu extends StatelessWidget {
+  final SideBarPage selectedPage;
+  final ValueChanged<SideBarPage> onPageSelected;
 
-  const DashboardMenu({
+  const SideBarMenu({
     super.key,
     required this.selectedPage,
     required this.onPageSelected,
@@ -21,31 +21,31 @@ class DashboardMenu extends StatelessWidget {
           context,
           svgAssetPath: 'assets/svg/house.svg',
           title: context.l10n.home,
-          page: DashboardPage.home,
+          page: SideBarPage.home,
         ),
         _buildMenuItem(
           context,
           svgAssetPath: 'assets/svg/product.svg',
           title: context.l10n.products,
-          page: DashboardPage.products,
+          page: SideBarPage.products,
         ),
         _buildMenuItem(
           context,
           svgAssetPath: 'assets/svg/customer.svg',
           title: context.l10n.customer,
-          page: DashboardPage.customers,
+          page: SideBarPage.customers,
         ),
         _buildMenuItem(
           context,
           svgAssetPath: 'assets/svg/invoice.svg',
           title: context.l10n.invoice,
-          page: DashboardPage.invoice,
+          page: SideBarPage.invoice,
         ),
         // _buildMenuItem(
         //   context,
         //   icon: Icons.settings,
         //   title: context.l10n.settings,
-        //   page: DashboardPage.settings,
+        //   page: SideBarPage.settings,
         // ),
       ],
     );
@@ -56,7 +56,7 @@ class DashboardMenu extends StatelessWidget {
     BuildContext context, {
     required String svgAssetPath,
     required String title,
-    required DashboardPage page,
+    required SideBarPage page,
   }) {
     final isSelected = selectedPage == page;
     final colorScheme = Theme.of(context).colorScheme;

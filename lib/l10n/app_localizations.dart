@@ -118,6 +118,12 @@ abstract class AppLocalizations {
   /// **'Products'**
   String get products;
 
+  /// No description provided for @dashboard.
+  ///
+  /// In en, this message translates to:
+  /// **'Dashboard'**
+  String get dashboard;
+
   /// No description provided for @invoice.
   ///
   /// In en, this message translates to:

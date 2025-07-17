@@ -21,6 +21,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get products => 'Products';
 
   @override
+  String get dashboard => 'Dashboard';
+
+  @override
   String get invoice => 'Invoice';
 
   @override

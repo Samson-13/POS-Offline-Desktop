@@ -4,10 +4,10 @@ import 'package:pos_offline_desktop/core/database/app_database.dart';
 
 import 'widgets.dart';
 
-class DashboardPageContent extends StatelessWidget {
+class SideBarPageContent extends StatelessWidget {
   final AppDatabase db;
 
-  const DashboardPageContent({super.key, required this.db});
+  const SideBarPageContent({super.key, required this.db});
 
   @override
   Widget build(BuildContext context) {
