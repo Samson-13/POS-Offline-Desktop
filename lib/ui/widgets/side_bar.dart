@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:pos_offline_desktop/l10n/l10n.dart';
 import 'package:pos_offline_desktop/ui/pages/dashboard_page.dart';
 
@@ -18,25 +19,25 @@ class DashboardMenu extends StatelessWidget {
       children: [
         _buildMenuItem(
           context,
-          icon: Icons.home_outlined,
+          svgAssetPath: 'assets/svg/house.svg',
           title: context.l10n.home,
           page: DashboardPage.home,
         ),
         _buildMenuItem(
           context,
-          icon: Icons.shopping_cart_outlined,
+          svgAssetPath: 'assets/svg/product.svg',
           title: context.l10n.products,
           page: DashboardPage.products,
         ),
         _buildMenuItem(
           context,
-          icon: Icons.person_outline,
+          svgAssetPath: 'assets/svg/customer.svg',
           title: context.l10n.customer,
           page: DashboardPage.customers,
         ),
         _buildMenuItem(
           context,
-          icon: Icons.receipt_outlined,
+          svgAssetPath: 'assets/svg/invoice.svg',
           title: context.l10n.invoice,
           page: DashboardPage.invoice,
         ),
@@ -50,18 +51,39 @@ class DashboardMenu extends StatelessWidget {
     );
   }
 
+  // List Tile
   Widget _buildMenuItem(
     BuildContext context, {
-    required IconData icon,
+    required String svgAssetPath,
     required String title,
     required DashboardPage page,
   }) {
     final isSelected = selectedPage == page;
+    final colorScheme = Theme.of(context).colorScheme;
+
     return ListTile(
-      leading: Icon(icon, color: Colors.white),
-      title: Text(title, style: const TextStyle(color: Colors.white)),
+      leading: SvgPicture.asset(
+        svgAssetPath,
+        width: 24,
+        height: 24,
+        colorFilter: ColorFilter.mode(
+          isSelected
+              ? colorScheme.primary
+              : Theme.of(context).colorScheme.onSurface,
+          BlendMode.srcIn,
+        ),
+      ),
+      title: Text(
+        title,
+        style: TextStyle(
+          color: isSelected
+              ? colorScheme.primary
+              : Theme.of(context).colorScheme.onSurface,
+          fontWeight: isSelected ? FontWeight.w600 : FontWeight.normal,
+        ),
+      ),
       selected: isSelected,
-      selectedTileColor: Colors.blueGrey[800],
+      selectedTileColor: colorScheme.surfaceTint.withValues(alpha: 0.3),
       onTap: () => onPageSelected(page),
     );
   }

@@ -97,7 +97,7 @@ abstract class AppLocalizations {
   /// No description provided for @brand_name.
   ///
   /// In en, this message translates to:
-  /// **'GIDEES'**
+  /// **'POS Samsun'**
   String get brand_name;
 
   /// No description provided for @brand_name_subtitle.

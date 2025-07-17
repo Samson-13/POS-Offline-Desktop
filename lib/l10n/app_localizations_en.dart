@@ -9,7 +9,7 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get brand_name => 'GIDEES';
+  String get brand_name => 'POS Samsun';
 
   @override
   String get brand_name_subtitle => '(NextComm)';

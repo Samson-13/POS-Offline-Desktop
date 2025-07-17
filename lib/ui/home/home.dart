@@ -8,7 +8,7 @@ import 'package:pos_offline_desktop/l10n/l10n.dart';
 import 'package:pos_offline_desktop/ui/customer/customer.dart';
 import 'package:pos_offline_desktop/ui/invoice/invoice.dart';
 import 'package:pos_offline_desktop/ui/pages/dashboard_page.dart';
-import 'package:pos_offline_desktop/ui/widgets/dash_board_menu.dart';
+import 'package:pos_offline_desktop/ui/widgets/side_bar.dart';
 
 import '../product/widgets/widgets.dart';
 import 'widgets/widgets.dart'; // Import the new file
@@ -38,8 +38,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 const Gap(50),
                 Text(
                   context.l10n.brand_name,
-                  style: const TextStyle(
-                    color: Colors.white,
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.onSurface,
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                   ),
@@ -58,7 +58,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           ),
           Expanded(
             child: Container(
-              color: Colors.grey[100],
+              color: Theme.of(context).colorScheme.surface,
               child: _buildPageContent(db),
             ),
           ),
