@@ -81,7 +81,7 @@ class _ContainerBoxWidgetState extends State<ContainerBoxWidget> {
       height: 200,
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
+        color: color.withValues(alpha: 0.1),
         border: Border.all(color: color),
         borderRadius: BorderRadius.circular(12),
       ),

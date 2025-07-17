@@ -13,8 +13,7 @@ import 'package:pdf/widgets.dart' as pw; // Use alias for pdf
 import 'package:pos_offline_desktop/core/database/app_database.dart'
     show AppDatabase, Invoice;
 import 'package:pos_offline_desktop/l10n/l10n.dart';
-import 'package:pos_offline_desktop/ui/invoice/widgets/export_invoice.dart';
-import 'package:pos_offline_desktop/ui/widgets/search_widget.dart';
+
 import 'package:pos_offline_desktop/ui/widgets/widgets.dart';
 
 import 'widgets.dart';
@@ -257,6 +256,7 @@ class _InvoiceContainerState extends State<InvoiceContainer> {
         _savedInvoices.add(invoice.id); // Track saved invoice
       });
 
+      // ignore: use_build_context_synchronously
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Invoice saved successfully!')),
       );

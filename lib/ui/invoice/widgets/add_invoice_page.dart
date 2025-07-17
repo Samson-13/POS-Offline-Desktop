@@ -20,7 +20,6 @@ class AddInvoiceDialog extends StatefulHookConsumerWidget {
 class _AddInvoiceDialogState extends ConsumerState<AddInvoiceDialog> {
   final _formKey = GlobalKey<FormState>();
   double _totalAmount = 0.0;
-  final TextEditingController _ctnController = TextEditingController();
 
   List<Customer> _customers = [];
   List<Product> _products = [];
@@ -103,10 +102,12 @@ class _AddInvoiceDialogState extends ConsumerState<AddInvoiceDialog> {
         );
       }
 
+      // ignore: use_build_context_synchronously
       Navigator.of(context).pop();
     } catch (e) {
       log('Error saving invoice: $e');
       ScaffoldMessenger.of(
+        // ignore: use_build_context_synchronously
         context,
       ).showSnackBar(SnackBar(content: Text('Error: $e')));
     }

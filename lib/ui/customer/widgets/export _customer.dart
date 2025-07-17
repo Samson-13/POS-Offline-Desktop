@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'dart:developer';
 import 'dart:io';
 
@@ -29,12 +30,15 @@ Future<void> exportCustomersToExcel(
       dialogTitle: 'Select export folder',
     );
     if (outputDir == null) {
+      // ignore: use_build_context_synchronously
       showSnack(context, 'Export cancelled.');
       return;
     }
 
+    // ignore: use_build_context_synchronously
     final fileName = await askForFileName(context);
     if (fileName == null || fileName.trim().isEmpty) {
+      // ignore: use_build_context_synchronously
       showSnack(context, 'Invalid filename.');
       return;
     }
@@ -93,13 +97,16 @@ Future<void> exportCustomersToExcel(
       final file = File(fullPath);
       await file.writeAsBytes(bytes, flush: true);
       log('Customers exported to: $fullPath');
+      // ignore: use_build_context_synchronously
       showSnack(context, 'Customers exported to: $fullPath');
     } else {
+      // ignore: use_build_context_synchronously
       showSnack(context, 'Failed to generate Excel bytes.');
     }
   } catch (e, stackTrace) {
     log('Export Error: $e');
     log('Stack trace: $stackTrace');
+    // ignore: use_build_context_synchronously
     showSnack(context, 'Failed to export: $e');
   }
 }

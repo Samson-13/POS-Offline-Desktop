@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:pos_offline_desktop/core/database/app_database.dart';
 import 'package:pos_offline_desktop/l10n/l10n.dart';
-import 'package:pos_offline_desktop/ui/widgets/search_widget.dart';
 
 import '../../widgets/widgets.dart';
 import 'widgets.dart';

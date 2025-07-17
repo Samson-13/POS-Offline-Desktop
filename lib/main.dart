@@ -1,4 +1,6 @@
 import 'dart:io';
+// ignore: depend_on_referenced_packages
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'package:desktop_window/desktop_window.dart';
 import 'package:drift/drift.dart';

@@ -8,6 +8,7 @@ import 'package:pos_offline_desktop/l10n/l10n.dart';
 import 'package:pos_offline_desktop/ui/customer/customer.dart';
 import 'package:pos_offline_desktop/ui/invoice/invoice.dart';
 import 'package:pos_offline_desktop/ui/pages/dashboard_page.dart';
+import 'package:pos_offline_desktop/ui/widgets/dash_board_menu.dart';
 
 import '../product/widgets/widgets.dart';
 import 'widgets/widgets.dart'; // Import the new file
