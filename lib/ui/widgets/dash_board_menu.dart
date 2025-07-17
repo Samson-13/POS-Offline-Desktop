@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pos_offline_desktop/l10n/l10n.dart';
+import 'package:pos_offline_desktop/ui/pages/dashboard_page.dart';
 
 class DashboardMenu extends StatelessWidget {
   final DashboardPage selectedPage;

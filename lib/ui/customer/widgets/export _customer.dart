@@ -4,7 +4,8 @@ import 'dart:io';
 import 'package:excel/excel.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:pos_offline_desktop/database/app_database.dart';
+import 'package:pos_offline_desktop/core/database/app_database.dart'
+    show AppDatabase;
 
 Future<void> exportCustomersToExcel(
   AppDatabase db,
@@ -19,6 +20,7 @@ Future<void> exportCustomersToExcel(
     );
 
     if (customers.isEmpty) {
+      // ignore: use_build_context_synchronously
       showSnack(context, 'No customers found to export.');
       return;
     }

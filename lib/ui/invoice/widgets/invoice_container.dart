@@ -10,7 +10,8 @@ import 'package:number_to_words/number_to_words.dart';
 import 'package:open_file_plus/open_file_plus.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw; // Use alias for pdf
-import 'package:pos_offline_desktop/database/app_database.dart';
+import 'package:pos_offline_desktop/core/database/app_database.dart'
+    show AppDatabase, Invoice;
 import 'package:pos_offline_desktop/l10n/l10n.dart';
 import 'package:pos_offline_desktop/ui/invoice/widgets/export_invoice.dart';
 import 'package:pos_offline_desktop/ui/widgets/search_widget.dart';

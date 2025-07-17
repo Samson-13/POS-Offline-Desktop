@@ -3,7 +3,6 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:pos_offline_desktop/ui/signup/login.dart';
-import 'package:pos_offline_desktop/ui/signup/login.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});

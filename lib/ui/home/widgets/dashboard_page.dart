@@ -1,6 +1,6 @@
 // dashboard_page_content.dart
 import 'package:flutter/material.dart';
-import 'package:pos_offline_desktop/database/app_database.dart';
+import 'package:pos_offline_desktop/core/database/app_database.dart';
 
 import 'widgets.dart';
 

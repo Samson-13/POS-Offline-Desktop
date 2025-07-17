@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
+import 'package:pos_offline_desktop/core/database/app_database.dart';
 import 'package:pos_offline_desktop/l10n/app_localizations.dart';
 import 'package:pos_offline_desktop/ui/home/home.dart';
 

@@ -5,7 +5,7 @@ import 'dart:io';
 import 'package:excel/excel.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:pos_offline_desktop/database/app_database.dart';
+import 'package:pos_offline_desktop/core/database/app_database.dart';
 
 Future<void> exportProductsToExcel(AppDatabase db, BuildContext context) async {
   try {

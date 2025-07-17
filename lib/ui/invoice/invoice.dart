@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pos_offline_desktop/database/app_database.dart';
-import 'package:pos_offline_desktop/ui/invoice/widgets/invoice_container.dart';
+import 'package:pos_offline_desktop/core/database/app_database.dart';
+
+import 'widgets/widgets.dart';
 
 class InvoiceScreen extends StatefulWidget {
   final AppDatabase db;

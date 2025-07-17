@@ -2,15 +2,14 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pos_offline_desktop/database/app_database.dart';
-import 'package:pos_offline_desktop/database/provider/app_database_provider.dart';
+import 'package:pos_offline_desktop/core/database/app_database.dart';
+import 'package:pos_offline_desktop/core/provider/app_database_provider.dart';
 import 'package:pos_offline_desktop/l10n/l10n.dart';
-import 'package:pos_offline_desktop/pages/dashboard_page.dart';
 import 'package:pos_offline_desktop/ui/customer/customer.dart';
 import 'package:pos_offline_desktop/ui/invoice/invoice.dart';
-import 'package:pos_offline_desktop/ui/product/product.dart';
-import 'package:pos_offline_desktop/ui/widgets/dash_board_menu.dart';
+import 'package:pos_offline_desktop/ui/pages/dashboard_page.dart';
 
+import '../product/widgets/widgets.dart';
 import 'widgets/widgets.dart'; // Import the new file
 
 class HomeScreen extends StatefulHookConsumerWidget {
